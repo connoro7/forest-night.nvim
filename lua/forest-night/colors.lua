@@ -7,7 +7,6 @@
 -- ---@field none string
 -- M.default = function()
 --     ---@type ColorScheme
---     ---@class colors
 --     local colors = {
 --         _style = "main",
 --         none = "NONE",
@@ -99,6 +98,14 @@
 --         special_builtin = "#9B59B6", -- built-in special
 --         special_key = "#66D9EF",     -- special keys
 --
+--         -- Additional colors needed by plugins
+--         blue = "#4ECDC4",    -- Blue color (same as cyan/string for this theme)
+--         cyan = "#4ECDC4",    -- Cyan
+--         magenta = "#9B59B6", -- Magenta (same as function color)
+--         purple = "#9B59B6",  -- Purple
+--         orange = "#F39C12",  -- Orange (same as yellow/warning)
+--         red = "#c78a7a",     -- Red (same as error)
+--
 --         -- Terminal colors
 --         terminal = {
 --             black = "#1a2125",
@@ -159,6 +166,11 @@
 --     -- Set theme style
 --     colors._style = "forest-night"
 --
+--     -- Additional semantic colors that might be needed
+--     colors.black = colors.bg_dark1
+--     colors.dark3 = "#545c7e"
+--     colors.dark5 = "#737aa2"
+--
 --     return colors
 -- end
 --
@@ -177,6 +189,8 @@
 -- end
 --
 -- return M
+
+
 
 local util = require("forest-night.util")
 
@@ -285,6 +299,8 @@ M.default = function()
         purple = "#9B59B6",  -- Purple
         orange = "#F39C12",  -- Orange (same as yellow/warning)
         red = "#c78a7a",     -- Red (same as error)
+        green = "#8FBC8F",   -- Green (same as const/number)
+        yellow = "#F39C12",  -- Yellow (same as warning)
 
         -- Terminal colors
         terminal = {
